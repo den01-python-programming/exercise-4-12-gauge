@@ -5,20 +5,20 @@ Create the class `Gauge`. The gauge has the instance variable `value`, a constru
 - Method `def increase()` grows the `value` instance variable's value by one. It does not grow the value beyond five.
 - Method `def decrease()` decreases the `value` instance variable's value by one. It does not decrease the value to negative numbers.
 - Method `def value()` returns the `value` variable's value.
-- Method `def full()` returns `true` if the instance variable `value` has the value five. Otherwise, it returns false.
+- Method `def full()` returns `True` if the instance variable `value` has the value five. Otherwise, it returns false.
 
 An example of the class in use.
 
 ```python
-g = Gauge()
+g = Gauge(0)
 
-while(!g.full()):
-    print("Not full! Value: " + g.value())
+while not g.full():
+    print("Not full! Value: " + str(g.value))
     g.increase()
 
-print("Full! Value: " + g.value())
+print("Full! Value: " + str(g.value))
 g.decrease()
-print("Not full! Value: " + g.value())
+print("Not full! Value: " + str(g.value))
 
 ```
 
